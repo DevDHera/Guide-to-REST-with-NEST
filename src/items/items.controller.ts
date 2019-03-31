@@ -23,4 +23,8 @@ export class ItemsController {
         return `Delete ${id}`;
     }
 
+    @Put(':id')
+    update(@Body() updateItemDto: CreateItemDto, @Param('id') id): string {
+        return `Update ${id} - Name: ${updateItemDto.name}`;
+    }
 }
