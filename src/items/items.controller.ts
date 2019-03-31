@@ -17,4 +17,10 @@ export class ItemsController {
     create(@Body() createItemDto: CreateItemDto): string {
         return `Name: ${createItemDto.name} Description: ${createItemDto.description}`;
     }
+
+    @Delete(':id')
+    delete(@Param('id') id): string {
+        return `Delete ${id}`;
+    }
+
 }
